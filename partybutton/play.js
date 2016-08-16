@@ -10,5 +10,15 @@ $("#button").mouseup(function() {
   $("body").removeClass("strobe");
   song.pause();
   song.currentTime = 0.3;
-  
+});
+
+$("#button").on('touchstart', function() {
+  song.play();
+  $("body").addClass("strobe");
+});
+
+$("#button").on('touchend', function() {
+  $("body").removeClass("strobe");
+  song.pause();
+  song.currentTime = 0.3;
 });
